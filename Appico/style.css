@@ -1,0 +1,149 @@
+body {
+ background-color: rosybrown;
+  
+}
+
+.container {
+    width: 80%;
+    margin: 5% auto;
+}
+
+.phone-carousel img {
+    transform: scale(0.5);
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 0.5s;
+    border-radius:15px;
+    opacity: 1;
+    
+}
+
+.phone-carousel .slick-active img {
+    transform: scale(0.6);
+    opacity: 0.5;
+}
+
+.phone-carousel .slick-active+.slick-active img {
+    transform: scale(0.7);
+    opacity: 0.75;
+}
+
+.phone-carousel .slick-center+.slick-active img {
+    transform: scale(0.7) !important;
+    opacity: 0.75 !important;
+}
+
+.phone-carousel .slick-center+.slick-active+.slick-active img {
+    transform: scale(0.6) !important;
+    opacity: 0.5 !important;
+
+}
+
+.phone-carousel .slick-active+.slick-active+.slick-active img {
+    transform: scale(0.8);
+    opacity: 1;
+
+}
+.phone{
+    background: lightgray;
+    border: 1px solid black;
+    margin: 0 auto;
+    position: fixed;
+    z-index: -1;
+    top: 8.5%;
+    left: 0;
+    right: 0;
+    width: 220px;
+    height: 430px;
+    border-radius: 40px;
+    padding: 55px 0;
+}
+.screen{
+    width: 179px;
+    height: 318px;
+    margin: 0px 21px;
+    background-color: black;
+    border-radius: 15px;
+}
+
+/*чёлка*/
+.phone::before{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    background: black;
+    box-shadow: inset 0 2px 2px rgb(0 0 0 / 20%);
+    border-radius: 25%;
+    left: 0;
+    right: 0;
+    margin: -25px auto 0;
+}
+
+/*кнопка*/
+.phone::after{  
+    content: '' ;
+    position: absolute;
+    left: 50%;
+    border: 2px solid grey;
+    border-radius: 50%;
+    bottom: 1.75%;
+    height: 0;
+    margin-left: -18px;
+    padding-top: 36px;
+    width: 36px;
+
+}
+
+.web{
+    position: absolute;
+    top: 7%;
+    left: 64%;
+    width: 4px;
+    height: 4px;
+    background: black;
+    box-shadow: 0 0 0 3px rgb(0 0 0 / 20%);
+    border-radius: 50%;
+}
+
+.web-2{
+    position: absolute;
+    top: 6.7%;
+    left: 70%;
+    width: 6px;
+    height: 6px;
+    background: black;
+    box-shadow: 0 0 0 4px rgb(0 0 0 / 20%);
+    border-radius: 50%;
+}
+
+@media (max-width: 980px) {
+     .phone-carousel {
+  position: relative;
+  top: 27px;
+       }
+       .phone-carousel .slick-active img{
+        transform: scale(0.7);
+        opacity: 0.5;
+}
+.phone-carousel .slick-active+.slick-center img{
+    transform: scale(0.8);
+    opacity: 1;
+}
+.phone-carousel .slick-center+.slick-active img{
+    transform: scale(0.7)!important;
+    opacity: 0.5!important;
+}
+}
+    
+@media(max-width:780px){
+   .phone-carousel {
+  position: relative;
+  top:-210px;
+       } 
+       .phone-carousel .slick-slide img{
+        transform: scale(0.35);
+        opacity: 1;
+       } 
+    }
